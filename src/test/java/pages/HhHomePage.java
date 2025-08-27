@@ -16,6 +16,7 @@ public class HhHomePage {
             mainPageHeader = $("[data-qa='main-page-anonymous-header']"), // Добавлен элемент
             searchResults = $("[data-qa='vacancy-serp__results']"); // Добавлен элемент
 
+    @Step("Открыть главную страницу")
     public HhHomePage openPage() {
         open("/");
         return this;
