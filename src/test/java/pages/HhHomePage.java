@@ -42,10 +42,8 @@ public class HhHomePage {
 
     @Step("Закрыть баннер")
     public HhHomePage closeBanner() {
-        try {
-            removeBanner.shouldBe(visible).click();
-        } catch (Exception e) {
-
+        if (removeBanner.exists()) {
+            removeBanner.click();
         }
         return this;
     }
