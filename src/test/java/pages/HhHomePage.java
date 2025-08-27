@@ -49,8 +49,8 @@ public class HhHomePage {
     }
 
     @Step("Проверить результаты поиска")
-    public HhHomePage verifySearchResults() {
-        searchResults.shouldBe(visible).shouldHave(text("QA"));
+    public HhHomePage verifySearchResults(String query) {
+        searchResults.shouldBe(visible).shouldHave(text(query));
         return this;
     }
 }
