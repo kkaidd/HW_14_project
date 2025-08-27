@@ -17,7 +17,7 @@ public class HhSearchTest extends TestBase {
     @ValueSource(strings = {
             "Java", "Python", "Аналитик"
     })
-    @ParameterizedTest(name = ": \nДля запроса {0} в результирующем поле должно быть значение {0}")
+    @ParameterizedTest(name = "Для запроса {0} в результирующем поле должно быть значение {0}")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Поиск вакансий")
     @Story("Поиск вакансий на hh.ru")
