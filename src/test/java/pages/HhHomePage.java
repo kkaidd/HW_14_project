@@ -1,16 +1,15 @@
 package pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.WebDriverRunner;
 import io.qameta.allure.Step;
-import org.openqa.selenium.JavascriptExecutor;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class HhHomePage {
 
-    private SelenideElement jobSearchInput = $("[data-qa='search-input']"),
+    private final SelenideElement
+            jobSearchInput = $("[data-qa='search-input']"),
             submitButton = $("[data-qa='search-button']"),
             removeBanner = $(".bloko-modal-close-button"),
             mainPageHeader = $("[data-qa='main-page-anonymous-header']"), // Добавлен элемент
