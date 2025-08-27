@@ -17,11 +17,11 @@ public class HhSearchTest extends TestBase {
     @ValueSource(strings = {
             "Java", "Python", "Аналитик"
     })
-    @ParameterizedTest(name = "{displayName}: Для запроса {0} в результирующем поле должно быть значение {0}")
+    @ParameterizedTest(name = ": \nДля запроса {0} в результирующем поле должно быть значение {0}")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Поиск вакансий")
     @Story("Поиск вакансий на hh.ru")
-    @DisplayName("Поиск вакансий IT специалиста")
+    @DisplayName("Поиск вакансий IT специалиста:")
     @Tag("parametrized")
     @Tag("simple")
     void searchVariousVacancies(String profession) {
