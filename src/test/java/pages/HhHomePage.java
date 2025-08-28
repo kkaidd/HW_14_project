@@ -7,13 +7,10 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class HhHomePage {
-
     private final SelenideElement
             jobSearchInput = $("[data-qa='search-input']"),
             submitButton = $("[data-qa='search-button']"),
-            removeBanner = $(".bloko-modal-close-button"),
-            mainPageHeader = $("[data-qa='main-page-anonymous-header']"), // Добавлен элемент
-            searchResults = $("[data-qa='vacancy-serp__results']"); // Добавлен элемент
+            mainPageHeader = $("[data-qa='main-page-anonymous-header']");
 
     @Step("Открыть главную страницу")
     public HhHomePage openPage() {
@@ -34,22 +31,8 @@ public class HhHomePage {
     }
 
     @Step("Нажать кнопку поиска")
-    public HhHomePage clickSubmitButton() {
+    public HhSearchResultsPage clickSubmitButton() {
         submitButton.click();
-        return this;
-    }
-
-    @Step("Закрыть баннер")
-    public HhHomePage closeBanner() {
-        if (removeBanner.exists()) {
-            removeBanner.click();
-        }
-        return this;
-    }
-
-    @Step("Проверить результаты поиска")
-    public HhHomePage verifySearchResults(String query) {
-        searchResults.shouldBe(visible).shouldHave(text(query));
-        return this;
+        return new HhSearchResultsPage();
     }
 }

@@ -11,12 +11,7 @@ import org.junit.jupiter.params.provider.ValueSource;
 import pages.HhHomePage;
 
 public class HhSearchTest extends TestBase {
-
-    HhHomePage hhHomePage = new HhHomePage();
-
-    @ValueSource(strings = {
-            "Java", "Python", "Аналитик"
-    })
+    @ValueSource(strings = {"Java", "Python", "Аналитик"})
     @ParameterizedTest(name = "Для запроса {0} в результирующем поле должно быть значение {0}")
     @Severity(SeverityLevel.NORMAL)
     @Feature("Поиск вакансий")
@@ -24,11 +19,12 @@ public class HhSearchTest extends TestBase {
     @DisplayName("Поиск вакансий IT специалиста:")
     @Tag("parametrized")
     @Tag("simple")
-    void searchVariousVacancies(String profession) {
-        hhHomePage.openPage()
+    void searchVariousVacanciesTest(String profession) {
+        HhHomePage homePage = new HhHomePage();
+        homePage.openPage()
                 .verifyMainPageHeader()
                 .setJobSearchInput(profession)
-                .clickSubmitButton()
+                .clickSubmitButton() // Возвращает HhSearchResultsPage
                 .closeBanner()
                 .verifySearchResults(profession);
     }
