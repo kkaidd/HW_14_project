@@ -2,10 +2,18 @@
 
 <div align="center">
 
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white)
-![Selenide](https://img.shields.io/badge/Selenide-43B02A?style=for-the-badge&logo=selenium&logoColor=white)
-![Allure](https://img.shields.io/badge/Allure-FF4A36?style=for-the-badge)
-![JUnit5](https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white)
+<a href="https://www.java.com/" target="_blank">
+  <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="Java">
+</a>
+<a href="https://selenide.org/" target="_blank">
+  <img src="https://img.shields.io/badge/Selenide-43B02A?style=for-the-badge&logo=selenium&logoColor=white" alt="Selenide">
+</a>
+<a href="https://docs.qameta.io/allure/" target="_blank">
+  <img src="https://img.shields.io/badge/Allure-FF4A36?style=for-the-badge" alt="Allure">
+</a>
+<a href="https://junit.org/junit5/" target="_blank">
+  <img src="https://img.shields.io/badge/JUnit5-25A162?style=for-the-badge&logo=junit5&logoColor=white" alt="JUnit5">
+</a>
 
 **Потому что ручной поиск работы - это так вчерашний день!** 🤖💼
 
